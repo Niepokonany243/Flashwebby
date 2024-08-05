@@ -116,7 +116,7 @@ $(document).ready(function() {
 
 ${text}
 
-Please provide the modified text along with a brief explanation of the changes made.`
+.`
                 }]
             }]
         };
