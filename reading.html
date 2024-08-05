@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEXI Readease - Reading</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="darkmode.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <h1>LEXI</h1>
+            <p>READEASE</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="upload-section">
+            <h3>Upload Image for OCR</h3>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="processImageButton">Process Image</button>
+        </div>
+        <div id="ocrResult"></div>
+        <h2>Enhance Your Reading</h2>
+        <div class="controls">
+            <button id="increaseFontSize">A+</button>
+            <button id="decreaseFontSize">A-</button>
+            <select id="colorScheme">
+                <option value="default">Default</option>
+                <option value="darkMode">Dark Mode</option>
+                <option value="sepia">Sepia</option>
+            </select>
+        
+            <select id="letterSpacing">
+                <option value="normal">Normal</option>
+                <option value="0.1em">Wide</option>
+                <option value="0.2em">Extra Wide</option>
+            </select>
+            <button id="playPauseButton">Play</button>
+            <input type="range" id="speedControl" min="0.5" max="2" step="0.1" value="1">
+            <span id="speedValue">1x</span>
+        </div>
+        <textarea id="textInput" placeholder="Paste your text here..."></textarea>
+        <label for="fileInput" class="filebutton">Choose File</label>
+        <input type="file" id="fileInput" accept=".txt,.pdf,.doc,.docx">
+        <button id="analyzeButton" class="button">Analyze Text</button>
+        <div id="textContent"></div>
+        <div id="analysisResult"></div>
+        
+        <div id="feedbackSection">
+            <h3>Provide Feedback</h3>
+            <textarea id="feedbackInput" placeholder="Enter your feedback here..."></textarea>
+            <button id="submitFeedback" class="button">Submit Feedback</button>
+        </div>
+        <div id="feedbackResponse"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 LEXI Readease. All rights reserved.</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="reading.js"></script>
+    <script src="feedback.js"></script>
+</body>
+</html>
