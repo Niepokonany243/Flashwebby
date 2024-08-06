@@ -1,14 +1,14 @@
 :root {
-    --primary-color: #4a90e2;
-    --secondary-color: #f5a623;
-    --background-color: #fdf6e3;
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --background-color: #f4f4f4;
     --text-color: #333333;
-    --button-hover: #3a7ac2;
-    --input-border: #ced4da;
+    --button-hover: #2980b9;
+    --input-border: #bdc3c7;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Open Sans', 'Arial', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
@@ -16,18 +16,25 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.6;
 }
 
 header {
-    background-color: white;
+    background-color: #fff;
     padding: 1rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 .dots {
@@ -36,16 +43,10 @@ header {
 }
 
 .dots span {
-    width: 12px;
-    height: 12px;
-    background-color: var(--primary-color);
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondary-color);
     border-radius: 50%;
-}
-
-h1, h2, h3, h4 {
-    margin: 0;
-    font-weight: bold;
-    color: var(--primary-color);
 }
 
 nav ul {
@@ -61,6 +62,7 @@ nav a {
     color: var(--text-color);
     font-weight: 500;
     transition: color 0.3s ease;
+    font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -72,25 +74,33 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    max-width: 800px;
+    padding: 3rem 2rem;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    line-height: 1.2;
 }
 
 .button, button, .filebutton {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.1s ease;
     text-decoration: none;
     display: inline-block;
-    margin: 5px;
+    margin: 10px;
+    text-align: center;
 }
 
 .button:hover, button:hover, .filebutton:hover {
@@ -103,7 +113,7 @@ main {
 }
 
 select {
-    padding: 8px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid var(--input-border);
     background-color: white;
@@ -116,8 +126,8 @@ textarea, #textContent {
     padding: 15px;
     margin-bottom: 1rem;
     border: 1px solid var(--input-border);
-    border-radius: 5px;
-    font-size: 1rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
     resize: vertical;
     min-height: 200px;
     background-color: white;
@@ -125,17 +135,12 @@ textarea, #textContent {
     box-sizing: border-box;
 }
 
-#textContent {
-    margin-top: 1rem;
-    line-height: 1.6;
-}
-
 #analysisResult {
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-top: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -148,9 +153,9 @@ textarea, #textContent {
     max-width: 100%;
     max-height: 400px;
     overflow-y: auto;
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 10px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    padding: 15px;
 }
 
 footer {
@@ -164,28 +169,31 @@ footer {
 .controls {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: 15px;
+    margin-bottom: 2rem;
     align-items: center;
     justify-content: center;
 }
 
 #speedControl {
-    width: 100px;
+    width: 120px;
 }
 
 .clickable-word {
     cursor: pointer;
     transition: background-color 0.3s ease;
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 
 .clickable-word:hover {
     background-color: var(--secondary-color);
-    border-radius: 3px;
+    color: white;
 }
 
 .highlighted {
     background-color: var(--secondary-color);
+    color: white;
     border-radius: 3px;
 }
 
@@ -193,16 +201,16 @@ footer {
     position: absolute;
     background-color: white;
     border: 1px solid var(--input-border);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     max-width: 300px;
     z-index: 1000;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 #imageUploadSection {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -213,18 +221,18 @@ footer {
 }
 
 #imageUploadLabel {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 24px;
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    margin: 5px;
+    margin: 10px;
 }
 
 #imageUploadLabel:hover {
-    background-color: var(--button-hover);
+    background-color: #c0392b;
     transform: translateY(-2px);
 }
 
@@ -245,20 +253,6 @@ body.dark-mode header {
 
 body.dark-mode nav a {
     color: var(--text-color);
-}
-
-body.dark-mode .button,
-body.dark-mode button,
-body.dark-mode .filebutton,
-body.dark-mode #imageUploadLabel {
-    background-color: var(--primary-color);
-}
-
-body.dark-mode .button:hover,
-body.dark-mode button:hover,
-body.dark-mode .filebutton:hover,
-body.dark-mode #imageUploadLabel:hover {
-    background-color: var(--button-hover);
 }
 
 body.dark-mode select,
@@ -301,11 +295,13 @@ body.sepia-mode .analysis-content {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 1rem;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        margin-top: 1rem;
     }
 
     .controls {
@@ -315,6 +311,7 @@ body.sepia-mode .analysis-content {
 
     .button, button, .filebutton, #imageUploadLabel {
         width: 100%;
+        margin: 5px 0;
     }
 
     #analysisResult, .analysis-content {
@@ -322,28 +319,67 @@ body.sepia-mode .analysis-content {
     }
 }
 
-/* Dyslexia-friendly font */
+/* Dyslexia-friendly styles */
 body.dyslexia-friendly {
-    font-family: 'OpenDyslexic', 'Arial', sans-serif;
+    font-family: 'OpenDyslexic', 'Comic Sans MS', 'Arial', sans-serif;
+    letter-spacing: 0.05em;
+    word-spacing: 0.1em;
 }
 
-/* Login button */
-#loginButton {
-    background-color: var(--primary-color);
+body.dyslexia-friendly p {
+    max-width: 70ch;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Homepage specific styles */
+.home-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
-    border: none;
-    padding: 8px 16px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.1s ease;
+    border-radius: 10px;
+    margin-bottom: 3rem;
 }
 
-#loginButton:hover {
-    background-color: var(--button-hover);
-    transform: translateY(-2px);
+.home-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
 }
 
-#loginButton:active {
-    transform: translateY(0);
+.home-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
 }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin-top: 0;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+        }
